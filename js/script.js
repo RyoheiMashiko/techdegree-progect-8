@@ -25,7 +25,7 @@ function displayEmployees(employeeData) {
    
    employeeHTML += `
     <div class="card" data-index="${index}">
-    <img class="img" src="${picture.large}" / >
+    <img class="img" src="${picture.large}">
     <div class="text-container">
       <h2 class="name">${name.first} ${name.last}</h2>
       <p class="email">${email}</p>
@@ -40,18 +40,23 @@ function displayEmployees(employeeData) {
 function displayModel(index) {
   let { name, dob, phone, email, location: { city, street, state, postcode
   }, picture } = employees[index];
+
+  console.log(street);
   
   let date = new Date(dob.date);
-
+  
   const modalHTML = `
-  <div class="card" data-index="${index}">
     <img class="img" src="${picture.large}" / >
     <div class="text-container">
       <h2 class="name">${name.first} ${name.last}</h2>
       <p class="email">${email}</p>
       <p class="adress">${city}</p>
+      <p class="phone">${phone}</p>
+      <p class="adress">${street},${state} ${postcode}</p>
+      <p class="birthday">Birthday:${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
   </div>`;
+
 
   overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
