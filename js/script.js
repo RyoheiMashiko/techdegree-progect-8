@@ -14,13 +14,13 @@ fetch(urlAPI)
 .catch(err => console.log(err));
 
 function displayEmployees(employeeData) {
-   let employees = employeeData; 
-   let employeeHTML = "";
+   employees = employeeData; 
+   let employeeHTML = " ";
 
    employees.forEach((employee,index) => {
    let name = employee.name;
    let email = employee.email;
-   let city = employee.city;
+   let city = employee.location.city;
    let picture = employee.picture;
    
    employeeHTML += `
@@ -49,7 +49,7 @@ function displayModel(index) {
     <div class="text-container">
       <h2 class="name">${name.first} ${name.last}</h2>
       <p class="email">${email}</p>
-      <p class="adress">${adress}</p>
+      <p class="adress">${city}</p>
     </div>
   </div>`;
 
