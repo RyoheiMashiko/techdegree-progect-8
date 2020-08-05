@@ -55,5 +55,18 @@ function displayModel(index) {
   modalContainer.innerHTML = modalHTML;
   }
 
-  
+  gridContainer.addEventListener("click", e => {
+    if( e.target !== gridContainer) { 
+    const card = e.target.closest(".card");
+    const index = card.attribute("data-index");
+
+    displayModel(index);
+    }
+  });
+
+ modalClose.addEventListener("click", () => {
+   overlay.classList.add("hidden");
+ });
+
+
   
