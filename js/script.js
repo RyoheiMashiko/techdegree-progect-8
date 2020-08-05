@@ -51,8 +51,9 @@ function displayModel(index) {
       <h2 class="name">${name.first} ${name.last}</h2>
       <p class="email">${email}</p>
       <p class="adress">${city}</p>
+      <hr>
       <p class="phone">${phone}</p>
-      <p class="adress">${street},${state} ${postcode}</p>
+      <p class="adress">${street.number} ${street.name}, ${state} ${postcode}</p>
       <p class="birthday">Birthday:${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
   </div>`;
