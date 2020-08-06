@@ -40,8 +40,6 @@ function displayEmployees(employeeData) {
 function displayModel(index) {
   let { name, dob, phone, email, location: { city, street, state, postcode
   }, picture } = employees[index];
-
-  console.log(street);
   
   let date = new Date(dob.date);
   
@@ -75,6 +73,32 @@ function displayModel(index) {
  modalClose.addEventListener("click", () => {
    overlay.classList.add("hidden");
  });
+
+//  Search bar function
+const input = document.getElementById("searchbar");
+// let inputValue = input.value.toUpperCase();
+
+let test = document.getElementsByClassName("name");
+
+input.addEventListener("keyup", e => {
+  let inputValue =e.target.value.toUpperCase();
+  let employeeName = document.getElementsByClassName("name");
+  for (let i = 0; i < (test.length-1); i ++ ) {
+    let employeeNames = employeeName[i].innerHTML.toUpperCase();
+    let check = employeeNames.indexOf(inputValue);
+   
+   if ( check > 0 ) {
+     
+   }else {
+     console.log("no");
+   }
+  }
+  // console.log(test);
+  // console.log((test.length-1));
+  // console.log(inputValue);
+  // console.log(test[1].innerText.toUpperCase());
+  
+});
 
 
   
