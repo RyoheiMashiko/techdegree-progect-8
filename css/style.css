@@ -78,7 +78,7 @@ p {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -96,7 +96,7 @@ hr {
 }
 
 .modal {
-  width: 20rem;
+  width: 13rem;
   margin: 10% auto auto;
   position: relative;
   text-align: center;
