@@ -1,5 +1,53 @@
 body {
   position: relative;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+h1 {
+ font-size: 1rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+  color: darkgray;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.card {
+  border: darkgray 1px solid;
+  align-items: center;
+  border-radius: 5px; 
+  display: flex;
+}
+
+.img {
+  width: 30%;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.text-container {
+  min-width: 0;
+  background-color: lightgreen;
+}
+
+.text-container p {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .overlay {
