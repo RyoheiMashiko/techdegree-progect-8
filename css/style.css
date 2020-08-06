@@ -9,12 +9,14 @@ body {
 }
 
 h1 {
+ color: orange;
  font-size: 1rem;
  margin-top: 1rem;
  margin-bottom: 1rem;
 }
 
 h2 {
+  font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -30,6 +32,11 @@ p {
 
 .email {
   font-style: italic;
+  color: orange;
+}
+
+.email:hover {
+  cursor: pointer;
 }
 
 .grid-container {
@@ -61,6 +68,7 @@ p {
 
 .text-container {
   min-width: 0;
+  padding-right: 1rem;
 }
 
 .text-container p {
@@ -78,13 +86,21 @@ p {
   background: rgba(100,100,100,0.5);
 }
 
+.img-modal {
+ border-radius: 50%;
+}
+
+hr {
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+}
+
 .modal {
   width: 20rem;
-  margin: 15% auto auto;
+  margin: 10% auto auto;
   position: relative;
   text-align: center;
-  background: smokewhite;
-  border: 1px solid red;
+  background-color: white;
   border-radius: 5px;
   padding: 30px 20px;
 }
@@ -94,6 +110,8 @@ p {
   right: 15px;
   top: 5px;
   cursor: pointer;
+  border: none;
+  background-color: white;
 }
 
 .hidden {
@@ -107,40 +125,53 @@ p {
    }
    
    h2 {
-     font-size: 1.3rem;
+     font-size: 1.2rem;
    }
    
    p {
-     font-size: 0.9rem;
+     font-size: 0.8rem;
    }
 
    .card {
      height: 8rem;
    }
 
+   .img {
+    width: 30%;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+  }
+
   .grid-container {
   grid-template-columns: 1fr 1fr;
    } 
-
-
 }
 
 @media(min-width:1024px) {
 
    .card {
-     height: 10rem;
+     height: 9rem;
    }
 
    .img {
     width: 30%;
     border-radius: 50%;
-    width: 7rem;
-    height: 7rem;
+    width: 6.5rem;
+    height: 6.5rem;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
 
+  .img-modal {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+   }
+
   .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
 
   } 
 }
