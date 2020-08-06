@@ -76,22 +76,21 @@ function displayModel(index) {
 
 //  Search bar function
 const input = document.getElementById("searchbar");
+const card = document.getElementsByClassName("card");
 // let inputValue = input.value.toUpperCase();
 
-let test = document.getElementsByClassName("name");
-
-input.addEventListener("keyup", e => {
+input.addEventListener("keyup", e => { 
   let inputValue =e.target.value.toUpperCase();
   let employeeName = document.getElementsByClassName("name");
-  for (let i = 0; i < (test.length-1); i ++ ) {
+  for (let i = 0; i < (employeeName.length-1); i ++ ) {
     let employeeNames = employeeName[i].innerHTML.toUpperCase();
     let check = employeeNames.indexOf(inputValue);
    
-   if ( check > 0 ) {
-     
+   if ( check > -1 ) {
+     card[i].style.display="";
    }else {
-     console.log("no");
-   }
+     card[i].style.display="none";
+  }
   }
   // console.log(test);
   // console.log((test.length-1));
