@@ -110,7 +110,7 @@ hr {
 }
 
 .modal {
-  width: 13rem;
+  width: 14rem;
   margin: 10% auto auto;
   position: relative;
   text-align: center;
@@ -121,11 +121,37 @@ hr {
 
 .modal-close {
   position: absolute;
-  right: 15px;
+  right: 5px;
   top: 5px;
   cursor: pointer;
   border: none;
   background-color: white;
+  color: darkgray;
+}
+
+.modal-back {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: darkgray;
+}
+
+.modal-forth {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: darkgray;
+}
+
+.modal-back,
+.modal-forth:hover {
+  cursor: pointer;
 }
 
 .hidden {

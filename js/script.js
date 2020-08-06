@@ -14,6 +14,7 @@ fetch(urlAPI)
 .catch(err => console.log(err));
 
 function displayEmployees(employeeData) {
+
    employees = employeeData; 
    let employeeHTML = "";
 
@@ -92,12 +93,9 @@ input.addEventListener("keyup", e => {
      card[i].style.display="none";
   }
   }
-  // console.log(test);
-  // console.log((test.length-1));
-  // console.log(inputValue);
-  // console.log(test[1].innerText.toUpperCase());
-  
 });
+
+
 
 
   
