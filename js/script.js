@@ -100,19 +100,25 @@ input.addEventListener("keyup", e => {
 
 modalForth.addEventListener("click", () =>{
   if(indexNumber <11 ) {
-    indexNumber++;
+    indexNumber ++ ;
+    displayModel(indexNumber);
+  }else if(indexNumber = 11){
+    indexNumber = 0;
     displayModel(indexNumber);
   }
 });
 
 modalBack.addEventListener("click", () =>{
   if(indexNumber > 0 ) {
-    indexNumber--;
+    indexNumber -- ;
     displayModel(indexNumber);
-  }
+  }else if(indexNumber = 1) {
+    indexNumber = 11;
+    displayModel(indexNumber);
+   }
 });
 
 
-// if(indexNumber = 0) {
-// modalBack.style.display="none";
-// };
+if(indexNumber = 0) {
+  modalBack.classList.add("hidden");
+};
