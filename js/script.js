@@ -58,8 +58,10 @@ function displayModel(index) {
       <p class="birthday">Birthday:${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
   </div>`;
-
+  
   overlay.classList.remove("hidden");
+  overlay.classList.remove("fadehidden");
+
   modalContainer.innerHTML = modalHTML;
   }
 
@@ -75,13 +77,14 @@ function displayModel(index) {
   });
 
  modalClose.addEventListener("click", () => {
-   overlay.classList.add("hidden");
+   overlay.classList.add("fadehidden");
+   function hide(){overlay.classList.add("hidden")}
+   setTimeout(hide, 200);
  });
 
 //  Search bar function
 const input = document.getElementById("searchbar");
 const card = document.getElementsByClassName("card");
-// let inputValue = input.value.toUpperCase();
 
 input.addEventListener("keyup", e => { 
   let inputValue =e.target.value.toUpperCase();
@@ -102,7 +105,7 @@ modalForth.addEventListener("click", () =>{
   if(indexNumber <11 ) {
     indexNumber ++ ;
     displayModel(indexNumber);
-  }else if(indexNumber = 11){
+  } else {
     indexNumber = 0;
     displayModel(indexNumber);
   }
@@ -112,13 +115,8 @@ modalBack.addEventListener("click", () =>{
   if(indexNumber > 0 ) {
     indexNumber -- ;
     displayModel(indexNumber);
-  }else if(indexNumber = 1) {
+  } else {
     indexNumber = 11;
     displayModel(indexNumber);
    }
 });
-
-
-if(indexNumber = 0) {
-  modalBack.classList.add("hidden");
-};

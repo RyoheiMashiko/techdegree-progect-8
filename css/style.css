@@ -1,5 +1,3 @@
-
-
 body {
   margin-left: 3%;
   margin-right: 3%;
@@ -91,6 +89,15 @@ p {
   text-overflow: ellipsis;
 }
 
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -98,6 +105,7 @@ p {
   left: 0;
   bottom: 0;
   background: rgba(100,100,100,0.5);
+  animation: fadeIn ease-in-out .25s;
 }
 
 .img-modal {
@@ -127,6 +135,8 @@ hr {
   border: none;
   background-color: white;
   color: darkgray;
+  outline: none;
+  transition: color .5s ;
 }
 
 .modal-back {
@@ -137,25 +147,53 @@ hr {
   border: none;
   background-color: white;
   color: darkgray;
+  outline: none;
+  transition: color .5s ;
 }
 
 .modal-forth {
   position: absolute;
-  right: 15px;
+  right: 5px;
   top: 50%;
   cursor: pointer;
   border: none;
   background-color: white;
   color: darkgray;
+  outline: none;
+  transition: color .5s ;
 }
 
-.modal-back,
+.modal-back:hover{
+  cursor: pointer;
+  color: orange;
+}
+
 .modal-forth:hover {
   cursor: pointer;
+  color: orange;
+}
+
+.modal-close:hover {
+ cursor: pointer;
+ color: orange;
+}
+
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0;
+  }
 }
 
 .hidden {
   display: none;
+}
+
+.fadehidden {
+  animation: fadeOut .3s ease;
 }
 
 @media(min-width:768px) {
