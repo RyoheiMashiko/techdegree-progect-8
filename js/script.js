@@ -5,7 +5,9 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-
+const modalBack = document.querySelector(".modal-back");
+const modalForth = document.querySelector(".modal-forth");
+let indexNumber = "";
 
 fetch(urlAPI) 
 .then(res => res.json())
@@ -66,6 +68,7 @@ function displayModel(index) {
 
     const card = e.target.closest(".card");
     const index = card.getAttribute("data-index");
+    indexNumber = index;
 
     displayModel(index);
     }
@@ -95,7 +98,21 @@ input.addEventListener("keyup", e => {
   }
 });
 
+modalForth.addEventListener("click", () =>{
+  if(indexNumber <11 ) {
+    indexNumber++;
+    displayModel(indexNumber);
+  }
+});
+
+modalBack.addEventListener("click", () =>{
+  if(indexNumber > 0 ) {
+    indexNumber--;
+    displayModel(indexNumber);
+  }
+});
 
 
-
-  
+// if(indexNumber = 0) {
+// modalBack.style.display="none";
+// };
